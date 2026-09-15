@@ -1,4 +1,4 @@
-function formatDate(date) {
+export function formatDate(date) {
     return new Intl.DateTimeFormat("en-AU", {
         day: "numeric",
         month: "long",
