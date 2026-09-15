@@ -1,0 +1,8 @@
+{
+  "name": "learning-journal",
+  "version": "1.0.0",
+  "scripts": {
+    "build": ""
+  },
+  "dependencies": {}
+}

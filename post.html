@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="site-container">
+       <header id="site-header" class="site-header">
+        </header>
+        
+       <main class="site-main"> 
+        <article id="post-container">
+        </article>
+       </main>
+    
+    <section class="recent-posts" aria-labelledby="recent-posts-title">
+        <h2 id="recent-posts-title">Recent posts</h2>
+            <div class="recent-posts-controls">
+            <button type="button" id="previous-post" aria-label="Previous post">&larr;</button>
+            <div id="recent-post-container"></div>
+            <button type="button" id="next-post" aria-label="Next post">&rarr;</button>
+            </div>
+    </section>
+
+	<footer id="footer">
+    </footer>
+    </div>
+
+    <script type="module" src="post.js"></script>
+    <script type="module" src="recent-posts.js"></script>
+    <script type="module" src="layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+:root {
+    --text-primary: #2c3d55;   /* headings, main text, borders */
+    --text-secondary: #6a687a; /* body text, dates, supporting copy */
+    --text-accent: #2c3d55;    /* interactive/focus states */
+    --surface: #ffffff;
+    --surface-subtle: #f4f6f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+/* Heading styles */
+h1, .site-footer {
+    font-family: "Montserrat", sans-serif;
+}
+h2 {
+    color: var(--text-secondary);
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary);
+}
+
+/* site class styles */
+.site-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.site-container main {
+    flex: 1;
+}
+.site-header-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+.site-header-container img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+.site-header-container nav {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: var(--text-accent);
+}
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+.site-title {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.site-footer {
+    padding: 2rem 2rem;
+    margin: 1em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 2px solid var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    width: 100%;
+}
+#footer {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin: 1em 0;
+}
+
+/* journal class styles */
+.journal-container {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+.journal-post {
+    width: 100%;
+    margin: 0;
+}
+.journal-post-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+    border-radius: 8px;
+}
+.journal-post-title {
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+.journal-post-date {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+.journal-titledate-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+.journal-post-content {
+    background-color: var(--surface-subtle);
+    padding: 1rem;
+    border-radius: 8px;
+    display: grid;
+}
+.journal-post-content-text {
+    margin: 1em 0;
+    line-height: 1.4;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 65ch;
+}
+.journal-post-paragraph {
+    margin: 1em 0;
+}
+#post-container { 
+    max-width: 75ch;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.about-post-title {
+    text-transform: uppercase;
+    color: var(--text-primary);
+    flex: 1;
+    max-width: 65ch;
+}
+.about-post-content {
+    margin: 2rem auto;
+    max-width: 65ch;
+}
+.about-post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 65ch;
+    flex-wrap: wrap;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid black;
+    flex: 0 0 150px;
+}
+
+/* recent posts section styles */
+.recent-posts {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+#recent-posts-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+}
+.recent-posts-controls {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+}
+.recent-posts-controls button {
+    font-size: 2rem;
+    line-height: 1;
+}
+.recent-post {
+    display: grid;
+    gap: 0.75rem;
+    background-color: var(--surface-subtle);
+    padding: 1rem;
+    border-radius: 8px;
+}
+.recent-post-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.recent-posts button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.recent-post-title {
+  
+    text-transform: uppercase;
+    color: var(--text-primary);
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* button and anchor link styles */
+#previous-post,
+#next-post {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+}    
+button,
+.journal-post-link,
+.recent-post-link {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: var(--surface-subtle);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+    margin: 1em 0;
+}
+button:hover,
+.journal-post-link:hover,
+.recent-post-link:hover,
+button:focus,
+.journal-post-link:focus,
+.recent-post-link:focus {
+    color: var(--surface-subtle);
+    background-color: var(--text-primary);
+}
+button {
+    cursor: pointer;
+}
+footer a {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+footer a:hover,
+footer a:focus {
+    color: var(--surface-subtle);
+    background-color: var(--text-primary);
+}
+header a {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    border-bottom: 2px solid transparent;
+}
+header a[aria-current="page"] { 
+    border-bottom-color: var(--text-primary);
+}
+header a:hover,
+header a:focus {
+    color: var(--surface-subtle);
+    background-color: var(--text-primary);
+}
+#load-more {
+    justify-self: center;
+    width: fit-content;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .site-container {
+        max-width: 1280px;
+    }
+    #post-container {
+        max-width: 1000px;
+    }
+    .about-post-content {
+        max-width: 100%;
+    }
+    .journal-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+    .journal-post-image {
+    height: 220px;
+    object-fit: cover;
+    }
+    .journal-post {
+        display: flex;
+    }
+    .journal-post-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 2px solid var(--text-primary);
+    }
+    .journal-post-link {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+    .recent-posts-controls {
+    grid-template-columns: auto minmax(0, 700px) auto;
+    justify-content: center;
+    }
+    #load-more {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 12rem;
+    }
+}
