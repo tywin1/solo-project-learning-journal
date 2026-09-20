@@ -71,7 +71,7 @@ export const posts = [
         "One other project I began is a page where you tick a box for the function you want (the first function I built is a bike specifications cleaner), and then drag the relevant csv or excel file into the drop target.  It cleans up the text, prefixes the file with cleaned_ and autodownloads it.",
         "Going to dig a bit deeper into this - there's a lot of repetitive cleanup work it could do internally to save a lot of time.  Just need to get more solid use cases for where it would be needed and useful."
         ],
-        date: "2026-09-01",
+        date: "2026-09-20",
         id: 7
     }
 ]
