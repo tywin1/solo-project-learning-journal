@@ -253,7 +253,8 @@ h2, p,
     border-radius: var(--radius);
 }
 .recent-post-image {
-    width: 100%;
+    width: min(100%, 320px);
+    margin-inline: auto;
     border-radius: var(--radius);
     object-fit: cover;
     aspect-ratio: 16/9;
@@ -356,6 +357,10 @@ header a:focus {
     .journal-post-image {
     height: 220px;
     object-fit: cover;
+    }
+    #post-container .journal-post-image {
+        height: auto;
+        object-fit: contain;
     }
     .journal-post {
         display: flex;
