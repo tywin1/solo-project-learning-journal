@@ -1,9 +1,32 @@
 :root {
-    --text-primary: #2c3d55;   /* headings, main text, borders */
-    --text-secondary: #6a687a; /* body text, dates, supporting copy */
-    --text-accent: #2c3d55;    /* interactive/focus states */
-    --surface: #ffffff;
-    --surface-subtle: #f4f6f8;
+    /* typography */
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Lora", serif;
+
+    /* colors */
+    --color-text: #384D48; /* primary text color */
+    --color-muted: #6E7271; /* muted text color */
+    --color-surface: #E2E2E2; /* surface background color (journal cards) */
+    --color-page: #D8D4D5; /* page background color */
+    --color-accent: #384D48; /* accent color */
+    --color-accent-hover: #384D48;
+    --color-border: #ACAD94; /* border color */
+
+    /* layout */
+    --content-width: 1100px;
+    --post-width: 720px;
+
+    /* spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+
+      /* shared styling */
+    --radius: 4px;
+    --transition: 160ms ease;
+
 }
 
 * {
@@ -16,24 +39,49 @@ body {
     padding: 0;
     min-height: 100vh;
 }
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-page);
+    font-family: var(--font-body);
+}
 /* Heading styles */
 h1, .site-footer {
     font-family: "Montserrat", sans-serif;
 }
-h2 {
-    color: var(--text-secondary);
+h2, p,
+.journal-post-page {
     font-family: "Lora", serif;
     margin: 0;
     padding: 0;
+    color: var(--color-text);
 }
 
-p {
-    font-family: "Lora", serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text-secondary);
+/* shared styles */
+.site-title,
+.journal-post-title {
+    font-family: var(--font-heading);
 }
-
+.journal-container,
+.site-header-container {
+  width: min(calc(100% - 2 * var(--space-md)), var(--content-width));
+  margin-inline: auto;
+}
+.journal-post {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.journal-post-link,
+#load-more {
+  color: var(--color-accent);
+  transition: color var(--transition);
+}
+.journal-post-link:hover,
+#load-more:hover {
+  color: var(--color-accent-hover);
+}
 /* site class styles */
 .site-container {
     width: 100%;
@@ -62,28 +110,28 @@ p {
     display: flex;
     gap: 0.5rem;
     font-weight: bold;
-    color: var(--text-accent);
+    color: var(--color-accent);
 }
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: white;
+    background-color: var(--color-page);
 }
+
 .site-title {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--color-text);
 }
 .site-footer {
     padding: 2rem 2rem;
     margin: 1em 0;
     text-transform: uppercase;
     font-weight: bold;
-    border-top: 2px solid var(--text-primary);
-    border-bottom: 2px solid var(--text-primary);
+    border-top: 2px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
     width: 100%;
 }
 #footer {
@@ -109,16 +157,16 @@ p {
     width: 100%;
     height: auto;
     margin: 1em 0;
-    border-radius: 8px;
+    border-radius: var(--radius);
 }
 .journal-post-title {
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--color-text);
 }
 .journal-post-date {
     font-size: 0.875rem;
     font-weight: bold;
-    color: var(--text-secondary);
+    color: var(--color-muted);
 }
 .journal-titledate-wrapper {
     display: flex;
@@ -127,9 +175,9 @@ p {
     gap: 1rem;
 }
 .journal-post-content {
-    background-color: var(--surface-subtle);
+    background-color: var(--color-surface);
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: var(--radius);
     display: grid;
 }
 .journal-post-content-text {
@@ -143,19 +191,19 @@ p {
     margin: 1em 0;
 }
 #post-container { 
-    max-width: 75ch;
+    max-width: var(--post-width);
     margin: 2rem auto;
     padding: 0 1rem;
 }
 .about-post-title {
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--color-text);
     flex: 1;
     max-width: 65ch;
 }
 .about-post-content {
-    margin: 2rem auto;
-    max-width: 65ch;
+    margin-inline: auto;
+    max-width: var(--post-width);
 }
 .about-post-header {
     display: flex;
@@ -169,7 +217,7 @@ p {
     height: 150px;
     border-radius: 50%;
     object-fit: contain;
-    border: 2px solid black;
+    border: 2px solid var(--color-border);
     flex: 0 0 150px;
 }
 
@@ -182,7 +230,7 @@ p {
 #recent-posts-title {
     font-size: 1.1rem;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--color-text);
     font-family: "Lora", serif;
     margin: 0;
     padding: 0;
@@ -200,13 +248,13 @@ p {
 .recent-post {
     display: grid;
     gap: 0.75rem;
-    background-color: var(--surface-subtle);
+    background-color: var(--color-surface);
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: var(--radius);
 }
 .recent-post-image {
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--radius);
     object-fit: cover;
     aspect-ratio: 16/9;
 }
@@ -217,7 +265,7 @@ p {
 .recent-post-title {
   
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--color-text);
     font-family: "Lora", serif;
     margin: 0;
     padding: 0;
@@ -237,12 +285,12 @@ button,
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
-    border: 2px solid black;
-    border-radius: 8px;
-    background-color: var(--surface-subtle);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-surface);
     text-decoration: none;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
+    color: var(--color-text);
+    transition: color var(--transition);
     margin: 1em 0;
 }
 button:hover,
@@ -251,8 +299,8 @@ button:hover,
 button:focus,
 .journal-post-link:focus,
 .recent-post-link:focus {
-    color: var(--surface-subtle);
-    background-color: var(--text-primary);
+    color: var(--color-surface);
+    background-color: var(--color-text);
 }
 button {
     cursor: pointer;
@@ -262,28 +310,28 @@ footer a {
     text-transform: uppercase;
     padding: 0.2rem;
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--color-text);
 }
 footer a:hover,
 footer a:focus {
-    color: var(--surface-subtle);
-    background-color: var(--text-primary);
+    color: var(--color-surface);
+    background-color: var(--color-text);
 }
 header a {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     padding: 0.2rem;
     text-decoration: none;
-    color: var(--text-primary);
-    border-bottom: 2px solid transparent;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
 }
 header a[aria-current="page"] { 
-    border-bottom-color: var(--text-primary);
+    border-bottom-color: var(--color-border);
 }
 header a:hover,
 header a:focus {
-    color: var(--surface-subtle);
-    background-color: var(--text-primary);
+    color: var(--color-surface);
+    background-color: var(--color-text);
 }
 #load-more {
     justify-self: center;
@@ -296,11 +344,9 @@ header a:focus {
     .site-container {
         max-width: 1280px;
     }
-    #post-container {
-        max-width: 1000px;
-    }
+    #post-container,
     .about-post-content {
-        max-width: 100%;
+        max-width: var(--post-width);
     }
     .journal-container {
         display: grid;
@@ -318,7 +364,7 @@ header a:focus {
         display: flex;
         flex-direction: column;
         width: 100%;
-        border-top: 2px solid var(--text-primary);
+        border-top: 2px solid var(--color-border);
     }
     .journal-post-link {
         margin-top: auto;
