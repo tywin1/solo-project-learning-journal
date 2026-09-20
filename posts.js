@@ -1,6 +1,6 @@
 export const posts = [
      {
-        image: "images/laptop1.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through April",
         content: [
         "If you're reading this, \"Load More\" functionality is working. Hooray!"
@@ -9,7 +9,7 @@ export const posts = [
         id: 1
     },
      {
-        image: "images/laptop1.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through May",
         content: [
         "If you're reading this, \"Load More\" functionality is working. Hooray!"
@@ -18,7 +18,7 @@ export const posts = [
         id: 2
     },
      {
-        image: "images/laptop1.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through June",
         content: [
         "If you're reading this, \"Load More\" functionality is working. Hooray!"
@@ -27,7 +27,7 @@ export const posts = [
         id: 3
     },
     {
-        image: "images/laptop1.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through July",
         content: [
         "Concepts and projects I learned through July - very basic stuff - the simple elements of websites, basic layouts and styling.  The Basketball Scoreboard project was the most difficult one - figuring out the layout and the Javascript to make the buttons work.",
@@ -37,7 +37,7 @@ export const posts = [
         id: 4
     },
     {
-        image: "images/devices.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through August",
         content: [
         "Learned a lot more of the more difficult CSS/JS concepts.  Position: absolute was a bit of a head scratcher.  Meme Picker took a bit of understanding, there was a lot of new JS code to learn and the syntax can be difficult - especially when you start writing individual functions - understanding how they all work together is challenging.",
@@ -48,7 +48,7 @@ export const posts = [
         id: 5
     },
     {
-        image: "images/matrix.jpg",
+        image: "images/stick man.jpg",
         title: "Learning through September",
         content: [
         "Slowed down a little bit in September, more learning and not as much big projects - I really wanted to dive into understanding APIs and how to send/receive data.  The responsive splash page was useful, learning how grid layouts function - very cool and a little different to flexboxes.",
@@ -58,5 +58,20 @@ export const posts = [
         ],
         date: "2026-09-01",
         id: 6
+    },
+    {
+        image: "images/stick man.jpg",
+        title: "Learning through September (continued)",
+        content: [
+        "Got the two Scrimba solo projects sorted - this Learning Journal, and a Color Picker that uses an API to fetch color palettes.  Thought I'd learn a bit more about tidier CSS practices so dived into root variables for this journal project (I think that's what they're called?) so easy changes in those variables spread across an entire site to keep things consistent.  Super cool - I'll be designing pages like from the beginning now.",
+        "Enlisted AI help to improve my work extensions project otherwise -",
+        "- Instead of three separate extensions (did that for proof of concept), it's now one extension with a tab for each function.",
+        "- Unified the design across the three separate extensions - the UI was a bit of a mess, it's much cleaner now.  There's also no headers anymore (the tab names are clear enough).",
+        "- The three extensions still function somewhat independently, to make maintenance or changes easier.  Running all of them from one codebase would be too much work, better to be somewhat modular.",
+        "One other project I began is a page where you tick a box for the function you want (the first function I built is a bike specifications cleaner), and then drag the relevant csv or excel file into the drop target.  It cleans up the text, prefixes the file with cleaned_ and autodownloads it.",
+        "Going to dig a bit deeper into this - there's a lot of repetitive cleanup work it could do internally to save a lot of time.  Just need to get more solid use cases for where it would be needed and useful."
+        ],
+        date: "2026-09-01",
+        id: 7
     }
 ]
