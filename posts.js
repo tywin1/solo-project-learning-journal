@@ -73,5 +73,19 @@ export const posts = [
         ],
         date: "2026-09-20",
         id: 7
+    },
+    {
+        image: "images/stick man.jpg",
+        title: "Learning through October",
+        content: [
+        "Lots of learning about APIs in the past week (lets include some of September as well).  The War card game project  was a very cool way to understand fetching/displaying data from an API.  I feel like it solidified my understanding of how to build and nest Javascript functions as well (was a little hazy before).",
+        "I veered off-track a little in terms of completing Scrimba stuff - for good reason though.  Firstly, I got stuck into creating a file drag-and-drop page (mostly thanks to AI!) that 1. takes supplier specification data and cleans up all the text to make it more suitable for our b2b, 2. reformats it into a CSV that NetSuite can immediately upload and 3. immediately downloads it.  Incredibly useful and saves a LOT of time.  Next step is to figure out an effective way to look up the supplier bike descriptions, and tie them to a parent SKU.",
+        "Secondly, I created a personal JavaScript/CSS \"cheat sheet\" to quickly reference commonly used functions, properties, and patterns.  It displays 3 examples - beginner, intermediate, and advanced, with the code on the left and the result on the right.  This saves me having to constantly Google \"how to do X in JavaScript\" or lookup and reunderstand grid or flex selectors and properties and all that complexity.",
+        "Thirdly (that sounds weird), I got AI to create the boilerplate for a Call Logger extension which is used all the time at work now. It has a couple of cool features that makes logging a call quicker, but mainly it was useful for learning how the Javascript works in tandem with the Apps Script that runs on the logger sheet, so I've effectively put my new API knowledge into real-world use, which is great.  AU is using it now as well so I'm pretty stoked about that.  3 months ago, I had no idea what an API really was, let alone how it works, or how to build one and use it.",
+        "Similar to the above, one more thing I noted down to reference when necessary is a CSS best-practise explainer.  This'll (I hope) fast-track my understanding of how to structure HTML & CSS efficiently from the get-go, in a standardized modern-use kind of way, instead of learning through trial and error every time.",
+        "Last thing of note, I'm currently working on the Movie Database solo project (using API data from OMDB) and am applying all the new Javascript, HTML and CSS best-practices as I go.  No stretch goals were given for this one, so I'll make them up when I see the end-result and see where it can be improved."
+        ],
+        date: "2026-10-03",
+        id: 8
     }
 ]
