@@ -87,5 +87,17 @@ export const posts = [
         ],
         date: "2026-10-03",
         id: 8
+    },
+    {
+        image: "images/stick man.jpg",
+        title: "Learning through October (continued)",
+        content: [
+        "I completed the Movie Database solo project - really happy with how it turned out.  I implemented a lot of self-identified stretch goals, and just general ideas I had to improve on it.  Load More, hyperlinked individual movie pages, responsive design, etc.  There was a lot of final polish applied as well, mainly so I could understand all the little things that should be done at a professional level.",
+        "API's make total sense now.  They're not as complicated as I initially thought.  The Scrimba API Dashboard project really helped solidify it all.",
+        "Currently working through the Scrimba UI Design course, then up next will be React, so looking forward to that.",
+        "Besides that, I've been finding and using websites like CSSBattle to get a more expert-level understanding of CSS.  It's interesting because the skill level of CSS needed there is extremely high - its a case of unknown-unknowns - I don't know the selectors or properties, nor how to use them.  So it's a lot more difficult to begin with.  It'll take a while before I can complete one without struggling I think."
+        ],
+        date: "2026-10-18",
+        id: 9
     }
 ]
